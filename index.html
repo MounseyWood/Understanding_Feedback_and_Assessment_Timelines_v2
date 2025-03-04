@@ -1,23 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BA (Hons) Fashion Program Timeline</title>
-  <!-- Load Mermaid from CDN -->
+  <!-- Load Mermaid -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.min.js"></script>
   <script>
     mermaid.initialize({
       startOnLoad: true,
-      theme: 'default' // Specify theme or configure a custom theme
+      securityLevel: 'loose', // Allows interaction
+      themeVariables: {
+        primaryColor: '#e9ecef',
+        edgeLabelBackground:'#dee2e6',
+        tertiaryColor: '#f8f9fa',
+        secondaryColor: '#adb5bd',
+        noteBkgColor: '#e2e3e5',
+        noteTextColor: '#333333',
+        noteBorderColor: '#ced4da',
+        lineColor: '#6c757d',
+        textColor: '#495057'
+      },
+      gantt: {
+        titleTopMargin: 25,
+        barHeight: 20,
+        barGap: 4,
+        topPadding: 60,
+        sidePadding: 20,
+        numberSectionStyles: 4,
+        axisFormat: '%b %Y',
+        tickInterval: '1month',
+        todayMarker: 'stroke-width:2px,stroke:#ff4d4f,opacity:0.8'
+      }
     });
   </script>
-  <!-- Tailwind CSS for styling (as used in the grade descriptors page) -->
+  <!-- Tailwind CSS for styling -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f1f1f1;
+      font-family: 'Nunito', sans-serif;
+      background-color: #f8f9fa;
       padding: 0;
       margin: 0;
       color: #333;
@@ -37,7 +60,7 @@
     .header {
       text-align: center;
       margin-bottom: 30px;
-      border-bottom: 3px solid #aaaaaa;
+      border-bottom: 3px solid #dee2e6;
       padding-bottom: 20px;
     }
     .footer {
@@ -46,7 +69,7 @@
       padding: 20px;
       color: #666;
       font-size: 0.9rem;
-      border-top: 1px solid #eee;
+      border-top: 1px solid #e9ecef;
     }
   </style>
 </head>
@@ -54,10 +77,10 @@
   <div class="ku-content-wrapper">
     <div class="ku-content">
       <div class="header">
-        <img src="KSA_secondary_lock-up.png" alt="Kingston School of Art Logo" class="h-6 mb-4 mx-auto block">
+        <img src="KSA_secondary_lock-up.png" alt="Kingston School of Art Logo" class="h-12 mb-4 mx-auto block">
         <h1 class="text-2xl font-bold mb-4">BA (Hons) Fashion Program Feedback and Assessment Timeline</h1>
         <p>
-          This timeline visualizes your feedback and assessment journey over three years. Note that Year 1 is non-weighted, whereas, Year 2 contributes 20% and Year 3 contributes 80% towards your total assessment mark and final degree classification.
+          This timeline visualizes your feedback and assessment journey over three years. Note that Year 1 is non-weighted, whereas Year 2 contributes 20% and Year 3 contributes 80% towards your total assessment mark and final degree classification.
           The timeline displays formative feedback opportunities and summative submission deadlines.<br>
         </p>
       </div>
@@ -69,7 +92,7 @@
         axisFormat %m-%Y
         excludes weekends
 
-        style grid.stroke fill:none,stroke:#CCC,stroke-dasharray:2,2
+        style todayMarker fill:red,stroke-width:2px,stroke:#ff4d4f
 
         %% Reimagined academic timeline
         title Academic Project Timeline for Design Course
@@ -142,5 +165,11 @@
       <p>© 2025 Kingston University</p>
     </div>
   </div>
+  <script>
+    // Example callback for interactive events
+    function exampleCallback(taskId) {
+      alert('Clicked on task: ' + taskId);
+    }
+  </script>
 </body>
 </html>
