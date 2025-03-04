@@ -39,11 +39,25 @@
 <body>
   <div class="mermaid">
 gantt
+    title Project Management Timeline
     dateFormat  YYYY-MM-DD
-    title My Custom Gantt
+    axisFormat %b %d
 
-    section Example Section
-    Task 1 :t1, 2025-01-01, 2025-01-07
+    section Project Chartering
+    Finalize Project Requirements     :done,     req1, 2024-11-01, 2024-11-10
+    Approval from Stakeholders        :crit, done,    2024-11-11, 2024-11-13
+
+    section Planning Phase
+    Develop Project Plan              :active,   plan1, 2024-11-14, 10d
+    Assemble Project Team             :          team1, after plan1, 5d
+
+    section Execution Phase
+    Task Execution                    :crit,     exec1, after team1, 20d
+    Quality Assurance                 :          qa1,   after exec1, 10d
+
+    section Closure Phase
+    Project Review                    :crit,      review1, after qa1, 3d
+    Project Report                    :milestone, report1, 2024-12-31, 1d
     Task 2 :t2, 2025-01-08, 2025-01-14
   </div>
 </body>
