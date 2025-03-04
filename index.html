@@ -1,3 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BA (Hons) Fashion Program Feedback and Assessment Timeline</title>
+  <!-- Load Mermaid from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "default",
+      themeVariables: {
+        ganttBackgroundColor: "#ffffff",  // Chart background
+        ganttTaskColor: "#f1f1f1",        // Default horizontal bar color
+        ganttTaskTextColor: "#333333"
+      }
+    });
+  </script>
+  <!-- Tailwind CSS for styling (matching the grade descriptors page) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f1f1f1;
+      padding: 0;
+      margin: 0;
+      color: #333;
+    }
+    .ku-content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .ku-content {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #aaaaaa;
+      padding-bottom: 20px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="ku-content-wrapper">
+    <div class="ku-content">
+      <div class="header">
+        <img src="KSA_secondary_lock-up.png" alt="Kingston School of Art Logo" class="h-6 mb-4 mx-auto block">
+        <h1 class="text-2xl font-bold mb-4">BA (Hons) Fashion Program Feedback and Assessment Timeline</h1>
+        <p>
+          This timeline visualizes your feedback and assessment journey over three years. Year 1 is non-weighted (TB1), Year 2 contributes 20% (TB2), and Year 3 contributes 80% (TB3) to your final classification.
+          Formative feedback opportunities (🔵) and summative submission deadlines (🔴) are highlighted.<br>
+          <strong>Year Quarters:</strong> Year 1 (Q1, Q2); Year 2 (Q1, Q2); Year 3 (Q1, Q2)
+        </p>
+      </div>
+
+      <!-- Mermaid Diagram Container -->
+      <div class="mermaid">
 gantt
     dateFormat  YYYY-MM-DD
     title BA Hons Fashion Program Timeline
